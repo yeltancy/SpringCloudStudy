@@ -1,0 +1,12 @@
+server:
+  port: 8302
+spring:
+  application:
+    name: eurekaserver
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka1:8301/eureka

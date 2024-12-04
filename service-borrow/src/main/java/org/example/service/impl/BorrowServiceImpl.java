@@ -17,15 +17,16 @@ import java.util.stream.Collectors;
 public class BorrowServiceImpl implements BorrowService {
     @Resource
     BorrowMapper borrowMapper;
+    @Resource
+    RestTemplate restTemplate;
 
     @Override
     public UserBorrowDetail getUserBorrowDetailByUid(int uid) {
         List<Borrow> borrowList = borrowMapper.getBorrowsByUid(uid);
-        RestTemplate template = new RestTemplate();
-        User user = template.getForObject("http://localhost:8000/user/" + uid, User.class);
+        User user = restTemplate.getForObject("http://service-user/user/" + uid, User.class);
         List<Book> bookList = borrowList
                 .stream()
-                .map(book -> template.getForObject("http://localhost:8200/book/" + book.getBid(), Book.class))
+                .map(book -> restTemplate.getForObject("http://service-book/book/" + book.getBid(), Book.class))
                 .collect(Collectors.toList());
         return new UserBorrowDetail(user, bookList);
     }
