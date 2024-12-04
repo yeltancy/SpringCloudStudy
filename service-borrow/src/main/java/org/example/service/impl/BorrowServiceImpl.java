@@ -1,7 +1,6 @@
 package org.example.service.impl;
 
 import jakarta.annotation.Resource;
-import lombok.extern.slf4j.Slf4j;
 import org.example.dto.UserBorrowDetail;
 import org.example.entity.Book;
 import org.example.entity.Borrow;
@@ -14,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Slf4j
 @Service
 public class BorrowServiceImpl implements BorrowService {
     @Resource
