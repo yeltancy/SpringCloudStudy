@@ -1,4 +1,4 @@
-package org.example.eneity;
+package org.example.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Borrow {
-    int id;
+public class User {
     int uid;
-    int bid;
+    String name;
+    int age;
+    String sex;
 }

@@ -10,11 +10,13 @@
         <module name="service-book" />
         <module name="service-user" />
         <module name="service-borrow" />
+        <module name="Commons" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Commons" options="-parameters" />
       <module name="SpringCloudStudy" options="" />
       <module name="service-book" options="-parameters" />
       <module name="service-borrow" options="-parameters" />

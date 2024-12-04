@@ -25,6 +25,7 @@
         <module>service-user</module>
         <module>service-book</module>
         <module>service-borrow</module>
+        <module>Commons</module>
     </modules>
     <scm>
         <connection/>
