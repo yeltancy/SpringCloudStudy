@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-book" />
-        <module name="service-user" />
         <module name="eureka-server" />
-        <module name="service-borrow" />
+        <module name="service-user" />
         <module name="Commons" />
+        <module name="service-borrow" />
       </profile>
     </annotationProcessing>
   </component>
